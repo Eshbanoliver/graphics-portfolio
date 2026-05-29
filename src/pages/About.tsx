@@ -172,7 +172,7 @@ export const About: React.FC = () => {
         <div className="about-main-grid">
           <div className="about-photo-wrapper">
             <div className="about-photo-frame">
-              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&auto=format&fit=crop&q=80" alt="Eshban Oliver portrait" />
+              <img src="/images/portrait.png" alt="Eshban Oliver portrait" />
             </div>
           </div>
 

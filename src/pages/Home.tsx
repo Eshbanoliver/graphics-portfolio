@@ -26,21 +26,21 @@ export const Home: React.FC<HomeProps> = ({ setActivePage }) => {
       id: 'fest-campaign',
       title: 'Neon Pulse Festival Campaign',
       category: 'Festival Campaigns',
-      img: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop&q=80',
+      img: '/images/project_festival.png',
       desc: 'Cinematic visual direction and social deliverables driving over 1.2M impressions.',
     },
     {
       id: 'reel-cut',
       title: 'High-Retention Finance Reel',
       category: 'Reels Editing',
-      img: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=80',
+      img: '/images/project_finance.png',
       desc: 'Fast-paced storytelling with custom motion graphics boosting views by 300%.',
     },
     {
       id: 'brand-prom',
       title: 'Aether Premium Identity',
       category: 'Branding Visuals',
-      img: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&auto=format&fit=crop&q=80',
+      img: '/images/project_branding.png',
       desc: 'Bold identity concept tailored for next-generation digital branding.',
     }
   ];
@@ -546,7 +546,7 @@ export const Home: React.FC<HomeProps> = ({ setActivePage }) => {
       <section className="about-preview-section section-padding">
         <div className="about-split">
           <div className="about-split-img">
-            <img src="https://images.unsplash.com/photo-1542744094-3a31f103e35f?w=800&auto=format&fit=crop&q=80" alt="Creative workspace" />
+            <img src="/images/workspace.png" alt="Creative workspace" />
           </div>
           <div className="about-split-text">
             <div className="section-tag">About Me</div>
