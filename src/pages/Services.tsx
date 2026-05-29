@@ -84,7 +84,7 @@ export const Services: React.FC = () => {
 
         .services-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
           gap: 40px;
           margin-bottom: 120px;
         }
@@ -255,7 +255,10 @@ export const Services: React.FC = () => {
             grid-template-columns: 1fr;
           }
           .service-card {
-            padding: 32px;
+            padding: 32px 24px;
+          }
+          .workflow-section {
+            padding: 40px 24px;
           }
         }
       `}</style>

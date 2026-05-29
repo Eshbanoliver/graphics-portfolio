@@ -101,7 +101,7 @@ export const About: React.FC = () => {
 
         .what-i-do-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(260px, 15fr));
+          grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
           gap: 30px;
         }
 

@@ -185,10 +185,9 @@ export const Portfolio: React.FC = () => {
           box-shadow: 0 4px 15px rgba(168, 85, 247, 0.2);
         }
 
-        /* Portfolio Grid */
         .portfolio-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
           gap: 30px;
         }
 
