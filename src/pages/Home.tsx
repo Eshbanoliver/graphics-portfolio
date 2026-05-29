@@ -527,7 +527,7 @@ export const Home: React.FC<HomeProps> = ({ setActivePage }) => {
             <div className="hero-frame">
               <div className="hero-frame-inner">
                 <Flame size={44} style={{ color: 'var(--accent-purple)' }} />
-                <div className="hero-frame-logo">EO.STUDIO</div>
+                <div className="hero-frame-logo">SJ.STUDIO</div>
                 <p style={{ fontSize: '0.8rem', opacity: 0.7 }}>
                   CREATING FOR THE ATTENTION ECONOMY // HIGH CONVERSION DELIVERABLES
                 </p>

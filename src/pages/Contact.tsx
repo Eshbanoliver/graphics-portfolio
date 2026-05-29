@@ -8,7 +8,7 @@ export const Contact: React.FC = () => {
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
 
   const copyEmail = () => {
-    navigator.clipboard.writeText('contact@eshbanoliver.com');
+    navigator.clipboard.writeText('contact@sakshijames.com');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -300,7 +300,7 @@ export const Contact: React.FC = () => {
                 </div>
                 <div className="email-text">
                   <span className="email-label">Direct Email</span>
-                  <span className="email-val">contact@eshbanoliver.com</span>
+                  <span className="email-val">contact@sakshijames.com</span>
                 </div>
               </div>
               <button 

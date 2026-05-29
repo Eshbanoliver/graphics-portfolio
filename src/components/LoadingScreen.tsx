@@ -142,7 +142,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
           <span>© 2026</span>
         </div>
         <div className="loading-logo">
-          <span>ESHBAN OLIVER</span>
+          <span>SAKSHI JAMES</span>
           <div className="loading-tagline">DESIGN TEAM LEAD // VIDEO CREATIVE</div>
         </div>
         <div className="loading-bar-track">

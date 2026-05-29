@@ -206,7 +206,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activePage, setActivePage }) => 
       <header className={`navbar-header ${scrolled ? 'scrolled' : ''}`}>
         <div className="navbar-container">
           <a href="#home" className="navbar-logo" onClick={() => handleNavClick('home')}>
-            ESHBAN
+            SAKSHI
             <span className="navbar-logo-dot"></span>
           </a>
 

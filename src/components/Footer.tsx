@@ -152,7 +152,7 @@ export const Footer: React.FC<FooterProps> = ({ setActivePage }) => {
         <div className="footer-grid">
           <div className="footer-logo-col">
             <div className="footer-logo">
-              ESHBAN<span>OLIVER</span>
+              SAKSHI<span>JAMES</span>
             </div>
             <p className="footer-desc">
               Visual director & graphic design team lead crafting scroll-stopping digital content, brand promotional creatives, and custom identity systems.
@@ -188,8 +188,8 @@ export const Footer: React.FC<FooterProps> = ({ setActivePage }) => {
             <div className="footer-title">Contact</div>
             <ul className="footer-links">
               <li>
-                <a href="mailto:contact@eshbanoliver.com" className="footer-link">
-                  contact@eshbanoliver.com <ArrowUpRight size={14} />
+                <a href="mailto:contact@sakshijames.com" className="footer-link">
+                  contact@sakshijames.com <ArrowUpRight size={14} />
                 </a>
               </li>
               <li>
@@ -202,7 +202,7 @@ export const Footer: React.FC<FooterProps> = ({ setActivePage }) => {
         </div>
 
         <div className="footer-bottom">
-          <div>© {new Date().getFullYear()} Eshban Oliver. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} Sakshi James. All rights reserved.</div>
           <div className="footer-bottom-links">
             <a href="#privacy" className="footer-link" onClick={(e) => e.preventDefault()}>Privacy Policy</a>
             <a href="#terms" className="footer-link" onClick={(e) => e.preventDefault()}>Terms of Service</a>
