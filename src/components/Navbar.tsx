@@ -23,6 +23,17 @@ export const Navbar: React.FC<NavbarProps> = ({ activePage, setActivePage }) => 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   const navItems = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
@@ -158,20 +169,42 @@ export const Navbar: React.FC<NavbarProps> = ({ activePage, setActivePage }) => 
           left: 0;
           width: 100vw;
           height: 100vh;
-          background: #08080a;
+          background: rgba(8, 8, 10, 0.88);
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
           z-index: 850;
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          gap: 24px;
+          gap: 20px;
           padding: 100px 40px;
           transform: translateY(-100%);
           transition: transform 0.6s cubic-bezier(0.85, 0, 0.15, 1);
+          overflow-y: auto;
         }
 
         .navbar-menu-mobile.open {
           transform: translateY(0);
+        }
+
+        @keyframes mobile-item-fade-in {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .navbar-menu-mobile-item {
+          opacity: 0;
+        }
+
+        .navbar-menu-mobile.open .navbar-menu-mobile-item {
+          animation: mobile-item-fade-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
         .navbar-link-mobile {
@@ -179,13 +212,14 @@ export const Navbar: React.FC<NavbarProps> = ({ activePage, setActivePage }) => 
           font-size: 2rem;
           font-weight: 700;
           color: var(--text-secondary);
+          display: block;
           transition: var(--transition-smooth);
         }
 
         .navbar-link-mobile.active,
         .navbar-link-mobile:hover {
           color: var(--text-primary);
-          transform: scale(1.1);
+          transform: scale(1.05);
         }
 
         @media (max-width: 991px) {
@@ -250,11 +284,12 @@ export const Navbar: React.FC<NavbarProps> = ({ activePage, setActivePage }) => 
 
       {/* Mobile Navigation Menu */}
       <div className={`navbar-menu-mobile ${isOpen ? 'open' : ''}`}>
-        {navItems.map((item) => (
+        {navItems.map((item, index) => (
           <a
             key={item.id}
             href={`#${item.id}`}
-            className={`navbar-link-mobile ${activePage === item.id ? 'active' : ''}`}
+            className={`navbar-link-mobile navbar-menu-mobile-item ${activePage === item.id ? 'active' : ''}`}
+            style={{ animationDelay: `${index * 60 + 100}ms` }}
             onClick={(e) => {
               e.preventDefault();
               handleNavClick(item.id);
@@ -265,8 +300,13 @@ export const Navbar: React.FC<NavbarProps> = ({ activePage, setActivePage }) => 
         ))}
         <a
           href="#contact"
-          className="navbar-cta-btn"
-          style={{ marginTop: '20px', fontSize: '1.1rem', padding: '14px 32px' }}
+          className="navbar-cta-btn navbar-menu-mobile-item"
+          style={{
+            marginTop: '20px',
+            fontSize: '1.1rem',
+            padding: '14px 32px',
+            animationDelay: `${navItems.length * 60 + 100}ms`
+          }}
           onClick={(e) => {
             e.preventDefault();
             handleNavClick('contact');

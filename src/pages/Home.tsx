@@ -475,7 +475,7 @@ export const Home: React.FC<HomeProps> = ({ setActivePage }) => {
           .hero-container {
             grid-template-columns: 1fr;
             text-align: center;
-            gap: 60px;
+            gap: 48px;
           }
           .hero-content {
             align-items: center;
@@ -486,6 +486,14 @@ export const Home: React.FC<HomeProps> = ({ setActivePage }) => {
           .hero-ctas {
             justify-content: center;
           }
+          .hero-frame {
+            width: min(380px, 85vw);
+            height: min(380px, 85vw);
+          }
+          .hero-abstract-canvas {
+            width: min(380px, 85vw);
+            height: min(380px, 85vw);
+          }
           .about-split {
             grid-template-columns: 1fr;
             gap: 40px;
@@ -494,6 +502,18 @@ export const Home: React.FC<HomeProps> = ({ setActivePage }) => {
             flex-direction: column;
             align-items: flex-start;
             gap: 20px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .hero-section {
+            padding: 100px 6% 60px 6%;
+          }
+          .hero-title {
+            font-size: clamp(2.2rem, 7vw, 3.5rem);
+          }
+          .hero-subheadline {
+            font-size: 0.95rem;
           }
         }
       `}</style>
