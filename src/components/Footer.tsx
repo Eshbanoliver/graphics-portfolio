@@ -127,6 +127,15 @@ export const Footer: React.FC<FooterProps> = ({ setActivePage }) => {
           color: var(--text-muted);
         }
 
+        .footer-copyright-link {
+          color: inherit;
+          transition: var(--transition-fast);
+        }
+
+        .footer-copyright-link:hover {
+          color: var(--text-primary);
+        }
+
         .footer-bottom-links {
           display: flex;
           gap: 24px;
@@ -202,7 +211,20 @@ export const Footer: React.FC<FooterProps> = ({ setActivePage }) => {
         </div>
 
         <div className="footer-bottom">
-          <div>© {new Date().getFullYear()} Sakshi James. All rights reserved.</div>
+          <div>
+            © {new Date().getFullYear()}{' '}
+            <a
+              href="#home"
+              className="footer-copyright-link"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick('home');
+              }}
+            >
+              Sakshi James
+            </a>
+            . All rights reserved.
+          </div>
           <div className="footer-bottom-links">
             <a href="#privacy" className="footer-link" onClick={(e) => e.preventDefault()}>Privacy Policy</a>
             <a href="#terms" className="footer-link" onClick={(e) => e.preventDefault()}>Terms of Service</a>
