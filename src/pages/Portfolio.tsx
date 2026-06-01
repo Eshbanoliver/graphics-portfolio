@@ -194,8 +194,11 @@ export const Portfolio: React.FC = () => {
         .portfolio-card {
           border-radius: 20px;
           overflow: hidden;
-          background: rgba(255, 255, 255, 0.02);
-          border: 1px solid var(--border-color);
+          background: linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+                      linear-gradient(135deg, rgba(168, 85, 247, 0.35) 0%, rgba(0, 240, 255, 0.35) 100%) border-box;
+          border: 1px solid transparent;
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
           transition: var(--transition-smooth);
           height: 100%;
           display: flex;
@@ -205,8 +208,10 @@ export const Portfolio: React.FC = () => {
 
         .portfolio-card:hover {
           transform: translateY(-8px);
-          border-color: var(--border-color-hover);
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+          background: linear-gradient(var(--bg-card-hover), var(--bg-card-hover)) padding-box,
+                      linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-blue) 100%) border-box;
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6),
+                      0 0 20px rgba(168, 85, 247, 0.15);
         }
 
         .portfolio-img-wrap {
@@ -312,12 +317,16 @@ export const Portfolio: React.FC = () => {
         .modal-card {
           width: 100%;
           max-width: 1000px;
-          background: #0e0e13;
-          border: 1px solid var(--border-color);
+          background: linear-gradient(rgba(14, 14, 19, 0.95), rgba(14, 14, 19, 0.95)) padding-box,
+                      linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-blue) 100%) border-box;
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
+          border: 1px solid transparent;
           border-radius: 24px;
           overflow: hidden;
           position: relative;
-          box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8),
+                      0 0 30px rgba(168, 85, 247, 0.15);
           max-height: 90vh;
           display: flex;
           flex-direction: column;

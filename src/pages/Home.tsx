@@ -277,8 +277,11 @@ export const Home: React.FC<HomeProps> = ({ setActivePage }) => {
         .featured-card {
           border-radius: 20px;
           overflow: hidden;
-          background: rgba(255, 255, 255, 0.02);
-          border: 1px solid var(--border-color);
+          background: linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+                      linear-gradient(135deg, rgba(168, 85, 247, 0.35) 0%, rgba(0, 240, 255, 0.35) 100%) border-box;
+          border: 1px solid transparent;
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
           transition: var(--transition-smooth);
           height: 100%;
           display: flex;
@@ -287,8 +290,10 @@ export const Home: React.FC<HomeProps> = ({ setActivePage }) => {
 
         .featured-card:hover {
           transform: translateY(-8px);
-          border-color: var(--border-color-hover);
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+          background: linear-gradient(var(--bg-card-hover), var(--bg-card-hover)) padding-box,
+                      linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-blue) 100%) border-box;
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5),
+                      0 0 20px rgba(168, 85, 247, 0.15);
         }
 
         .featured-img-wrap {
@@ -372,8 +377,11 @@ export const Home: React.FC<HomeProps> = ({ setActivePage }) => {
         .service-preview-card {
           padding: 40px 30px;
           border-radius: 20px;
-          background: rgba(255, 255, 255, 0.02);
-          border: 1px solid var(--border-color);
+          background: linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+                      linear-gradient(135deg, rgba(168, 85, 247, 0.35) 0%, rgba(0, 240, 255, 0.35) 100%) border-box;
+          border: 1px solid transparent;
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
           display: flex;
           flex-direction: column;
           gap: 20px;
@@ -381,10 +389,11 @@ export const Home: React.FC<HomeProps> = ({ setActivePage }) => {
         }
 
         .service-preview-card:hover {
-          background: var(--bg-card-hover);
-          border-color: var(--accent-purple);
+          background: linear-gradient(var(--bg-card-hover), var(--bg-card-hover)) padding-box,
+                      linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-blue) 100%) border-box;
           transform: translateY(-5px);
-          box-shadow: 0 15px 30px rgba(168, 85, 247, 0.1);
+          box-shadow: 0 15px 30px rgba(168, 85, 247, 0.1),
+                      0 0 20px rgba(168, 85, 247, 0.15);
         }
 
         .service-icon-wrap {
@@ -433,8 +442,11 @@ export const Home: React.FC<HomeProps> = ({ setActivePage }) => {
         .stat-card {
           padding: 40px 30px;
           border-radius: 20px;
-          border: 1px solid var(--border-color);
-          background: rgba(8, 8, 10, 0.5);
+          border: 1px solid transparent;
+          background: linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+                      linear-gradient(135deg, rgba(168, 85, 247, 0.35) 0%, rgba(0, 240, 255, 0.35) 100%) border-box;
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
           text-align: center;
           display: flex;
           flex-direction: column;
@@ -444,8 +456,10 @@ export const Home: React.FC<HomeProps> = ({ setActivePage }) => {
         }
 
         .stat-card:hover {
-          border-color: var(--accent-blue);
-          box-shadow: 0 15px 30px rgba(0, 240, 255, 0.08);
+          background: linear-gradient(var(--bg-card-hover), var(--bg-card-hover)) padding-box,
+                      linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-blue) 100%) border-box;
+          box-shadow: 0 15px 30px rgba(0, 240, 255, 0.08),
+                      0 0 20px rgba(0, 240, 255, 0.15);
           transform: scale(1.03);
         }
 

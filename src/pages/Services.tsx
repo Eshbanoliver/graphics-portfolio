@@ -90,8 +90,11 @@ export const Services: React.FC = () => {
         }
 
         .service-card {
-          background: rgba(16, 16, 22, 0.6);
-          border: 1px solid var(--border-color);
+          background: linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+                      linear-gradient(135deg, rgba(168, 85, 247, 0.35) 0%, rgba(0, 240, 255, 0.35) 100%) border-box;
+          border: 1px solid transparent;
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
           border-radius: 24px;
           padding: 48px;
           display: flex;
@@ -101,10 +104,11 @@ export const Services: React.FC = () => {
         }
 
         .service-card:hover {
-          border-color: var(--accent-purple);
-          background: rgba(28, 28, 38, 0.8);
+          background: linear-gradient(var(--bg-card-hover), var(--bg-card-hover)) padding-box,
+                      linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-blue) 100%) border-box;
           transform: translateY(-8px);
-          box-shadow: 0 20px 40px rgba(168, 85, 247, 0.05);
+          box-shadow: 0 20px 40px rgba(168, 85, 247, 0.05),
+                      0 0 20px rgba(168, 85, 247, 0.15);
         }
 
         .service-card-header {

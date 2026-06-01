@@ -147,19 +147,22 @@ export const Experience: React.FC = () => {
 
         /* Timeline Card */
         .timeline-card {
-          background: rgba(16, 16, 22, 0.5);
-          backdrop-filter: blur(12px);
-          border: 1px solid var(--border-color);
+          background: linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+                      linear-gradient(135deg, rgba(168, 85, 247, 0.35) 0%, rgba(0, 240, 255, 0.35) 100%) border-box;
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
+          border: 1px solid transparent;
           border-radius: 20px;
           padding: 40px;
           transition: var(--transition-smooth);
         }
 
         .timeline-card:hover {
-          border-color: var(--border-color-hover);
-          background: rgba(28, 28, 38, 0.7);
+          background: linear-gradient(var(--bg-card-hover), var(--bg-card-hover)) padding-box,
+                      linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-blue) 100%) border-box;
           transform: translateX(10px);
-          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4),
+                      0 0 20px rgba(168, 85, 247, 0.15);
         }
 
         .timeline-meta {

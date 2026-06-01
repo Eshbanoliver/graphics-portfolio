@@ -108,8 +108,11 @@ export const About: React.FC = () => {
         .what-card {
           padding: 40px;
           border-radius: 20px;
-          background: rgba(255, 255, 255, 0.02);
-          border: 1px solid var(--border-color);
+          background: linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+                      linear-gradient(135deg, rgba(168, 85, 247, 0.35) 0%, rgba(0, 240, 255, 0.35) 100%) border-box;
+          border: 1px solid transparent;
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
           transition: var(--transition-smooth);
           display: flex;
           flex-direction: column;
@@ -117,10 +120,11 @@ export const About: React.FC = () => {
         }
 
         .what-card:hover {
-          border-color: var(--accent-blue);
-          background: var(--bg-card-hover);
+          background: linear-gradient(var(--bg-card-hover), var(--bg-card-hover)) padding-box,
+                      linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-blue) 100%) border-box;
           transform: translateY(-8px);
-          box-shadow: 0 20px 40px rgba(0, 240, 255, 0.06);
+          box-shadow: 0 20px 40px rgba(0, 240, 255, 0.06),
+                      0 0 20px rgba(0, 240, 255, 0.15);
         }
 
         .what-card-icon {

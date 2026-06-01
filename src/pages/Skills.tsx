@@ -99,8 +99,11 @@ export const Skills: React.FC = () => {
         .skill-card {
           padding: 36px;
           border-radius: 20px;
-          background: rgba(16, 16, 22, 0.6);
-          border: 1px solid var(--border-color);
+          background: linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+                      linear-gradient(135deg, rgba(168, 85, 247, 0.35) 0%, rgba(0, 240, 255, 0.35) 100%) border-box;
+          border: 1px solid transparent;
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
           position: relative;
           overflow: hidden;
           transition: var(--transition-smooth);
@@ -110,9 +113,11 @@ export const Skills: React.FC = () => {
         }
 
         .skill-card:hover {
-          border-color: var(--border-color-hover);
+          background: linear-gradient(var(--bg-card-hover), var(--bg-card-hover)) padding-box,
+                      linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-blue) 100%) border-box;
           transform: translateY(-8px);
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+                      0 0 20px rgba(168, 85, 247, 0.15);
         }
 
         .skill-glow-layer {
