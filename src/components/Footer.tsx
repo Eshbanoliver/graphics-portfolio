@@ -160,8 +160,9 @@ export const Footer: React.FC<FooterProps> = ({ setActivePage }) => {
       <footer className="footer-section">
         <div className="footer-grid">
           <div className="footer-logo-col">
-            <div className="footer-logo">
-              SAKSHI<span>JAMES</span>
+            <div className="footer-logo" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <img src="/images/logo.png" alt="SJ Logo" style={{ height: '40px', width: 'auto', borderRadius: '8px' }} />
+              <span>SAKSHI<span>JAMES</span></span>
             </div>
             <p className="footer-desc">
               Visual director & graphic design team lead crafting scroll-stopping digital content, brand promotional creatives, and custom identity systems.
