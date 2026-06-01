@@ -226,7 +226,7 @@ export const Footer: React.FC<FooterProps> = ({ setActivePage }) => {
             . All rights reserved.
           </div>
           <div className="footer-bottom-links">
-            <a href="#privacy" className="footer-link" onClick={(e) => e.preventDefault()}>Privacy Policy</a>
+            <a href="#privacy" className="footer-link" onClick={(e) => { e.preventDefault(); handleNavClick('privacy'); }}>Privacy Policy</a>
             <a href="#terms" className="footer-link" onClick={(e) => e.preventDefault()}>Terms of Service</a>
           </div>
         </div>
