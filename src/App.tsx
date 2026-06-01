@@ -13,13 +13,14 @@ import Portfolio from './pages/Portfolio';
 import Skills from './pages/Skills';
 import Contact from './pages/Contact';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 
 function App() {
   const [loading, setLoading] = useState(true);
   const [activePage, setActivePage] = useState('home');
 
   useEffect(() => {
-    const validPages = ['home', 'about', 'experience', 'services', 'portfolio', 'skills', 'contact', 'privacy'];
+    const validPages = ['home', 'about', 'experience', 'services', 'portfolio', 'skills', 'contact', 'privacy', 'terms'];
     
     // Initial load hash sync
     const hash = window.location.hash.replace('#', '');
@@ -102,6 +103,7 @@ function App() {
         {activePage === 'skills' && <Skills />}
         {activePage === 'contact' && <Contact />}
         {activePage === 'privacy' && <PrivacyPolicy />}
+        {activePage === 'terms' && <TermsOfService />}
       </main>
 
       {/* Dynamic responsive footer */}
