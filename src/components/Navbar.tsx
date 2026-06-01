@@ -239,9 +239,9 @@ export const Navbar: React.FC<NavbarProps> = ({ activePage, setActivePage }) => 
       `}</style>
       <header className={`navbar-header ${scrolled ? 'scrolled' : ''}`}>
         <div className="navbar-container">
-          <a href="#home" className="navbar-logo" onClick={() => handleNavClick('home')}>
-            SAKSHI
-            <span className="navbar-logo-dot"></span>
+          <a href="#home" className="navbar-logo" onClick={() => handleNavClick('home')} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <img src="/images/logo.png" alt="SJ Logo" style={{ height: '32px', width: 'auto', borderRadius: '6px' }} />
+            <span>SAKSHI</span>
           </a>
 
           {/* Desktop Navigation */}
