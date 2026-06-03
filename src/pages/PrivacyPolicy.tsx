@@ -74,11 +74,58 @@ export const PrivacyPolicy: React.FC = () => {
           letter-spacing: 0.05em;
         }
 
+        .privacy-cta-section {
+          margin-top: 40px;
+          padding: 48px;
+          border-radius: 24px;
+          background: linear-gradient(135deg, rgba(168, 85, 247, 0.08) 0%, rgba(0, 240, 255, 0.08) 100%), var(--bg-card);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+          transition: var(--transition-smooth);
+        }
+
+        .privacy-cta-section:hover {
+          border-color: rgba(0, 240, 255, 0.3);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 
+                      0 0 20px rgba(0, 240, 255, 0.1);
+          transform: translateY(-3px);
+        }
+
+        .privacy-cta-section h2 {
+          font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+          font-family: var(--font-heading);
+          background: var(--gradient-accent);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-weight: 800;
+        }
+
+        .privacy-cta-section p {
+          font-size: 1.05rem;
+          color: var(--text-secondary);
+          max-width: 600px;
+          line-height: 1.6;
+        }
+
+        .privacy-cta-btn {
+          margin-top: 10px;
+        }
+
         @media (max-width: 768px) {
           .privacy-page-container {
             padding: 100px 5% 60px 5%;
           }
           .privacy-card {
+            padding: 32px 24px;
+          }
+          .privacy-cta-section {
             padding: 32px 24px;
           }
         }
@@ -138,6 +185,15 @@ export const PrivacyPolicy: React.FC = () => {
               If you have any questions or concerns about this policy or how I manage communications data, please reach out directly at: <a href="mailto:contact@sakshijames.com" style={{ color: 'var(--accent-blue)', textDecoration: 'underline' }}>contact@sakshijames.com</a>.
             </p>
           </div>
+        </div>
+
+        <div className="privacy-cta-section">
+          <h2>Ready to create something amazing?</h2>
+          <p>Let's collaborate on your next design or creative project and build something extraordinary together.</p>
+          <a href="#contact" className="btn-accent privacy-cta-btn">
+            Let's Talk Design
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: '6px' }}><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
         </div>
       </div>
     </>
