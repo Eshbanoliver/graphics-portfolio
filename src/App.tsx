@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import LoadingScreen from './components/LoadingScreen';
 import CustomCursor from './components/CustomCursor';
 import { Whatsapp } from './components/SocialIcons';
+import { ArrowUp } from 'lucide-react';
 
 // Pages
 import Home from './pages/Home';
@@ -19,6 +20,23 @@ import TermsOfService from './pages/TermsOfService';
 function App() {
   const [loading, setLoading] = useState(true);
   const [activePage, setActivePage] = useState('home');
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScrollVisibility = () => {
+      if (window.scrollY > 300) {
+        setShowScrollTop(true);
+      } else {
+        setShowScrollTop(false);
+      }
+    };
+    window.addEventListener('scroll', handleScrollVisibility);
+    return () => window.removeEventListener('scroll', handleScrollVisibility);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   useEffect(() => {
     const validPages = ['home', 'about', 'experience', 'services', 'portfolio', 'skills', 'contact', 'privacy', 'terms'];
@@ -122,6 +140,15 @@ function App() {
         <span className="whatsapp-fab-tooltip">Chat with me</span>
       </a>
 
+      {/* Scroll to Top Button */}
+      <button
+        className={`scroll-top-btn ${showScrollTop ? 'visible' : ''}`}
+        onClick={scrollToTop}
+        aria-label="Scroll to top"
+      >
+        <ArrowUp size={20} />
+      </button>
+
       <style>{`
         .page-transition-enter {
           animation: page-fade-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -146,7 +173,7 @@ function App() {
         .whatsapp-fab {
           position: fixed;
           bottom: 30px;
-          right: 30px;
+          left: 30px;
           width: 56px;
           height: 56px;
           background-color: #25D366;
@@ -169,7 +196,7 @@ function App() {
 
         .whatsapp-fab-tooltip {
           position: absolute;
-          right: 70px;
+          left: 70px;
           background: rgba(8, 8, 10, 0.9);
           border: 1px solid rgba(255, 255, 255, 0.08);
           color: #ffffff;
@@ -181,7 +208,7 @@ function App() {
           white-space: nowrap;
           opacity: 0;
           pointer-events: none;
-          transform: translateX(10px);
+          transform: translateX(-10px);
           transition: opacity 0.3s ease, transform 0.3s ease;
           box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
         }
@@ -189,6 +216,43 @@ function App() {
         .whatsapp-fab:hover .whatsapp-fab-tooltip {
           opacity: 1;
           transform: translateX(0);
+        }
+
+        /* Scroll to Top Button */
+        .scroll-top-btn {
+          position: fixed;
+          bottom: 30px;
+          right: 30px;
+          width: 56px;
+          height: 56px;
+          background: linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+                      linear-gradient(135deg, rgba(168, 85, 247, 0.35) 0%, rgba(0, 240, 255, 0.35) 100%) border-box;
+          border: 1px solid transparent;
+          color: #ffffff;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+          z-index: 800;
+          cursor: none;
+          transform: translateY(100px);
+          opacity: 0;
+          pointer-events: none;
+          transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.4s ease, background-color 0.3s ease;
+        }
+
+        .scroll-top-btn.visible {
+          transform: translateY(0);
+          opacity: 1;
+          pointer-events: auto;
+        }
+
+        .scroll-top-btn:hover {
+          background: linear-gradient(var(--bg-card-hover), var(--bg-card-hover)) padding-box,
+                      linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-blue) 100%) border-box;
+          transform: translateY(-5px);
+          box-shadow: 0 8px 25px rgba(168, 85, 247, 0.25);
         }
 
         @keyframes whatsapp-pulse {
@@ -206,12 +270,18 @@ function App() {
         @media (max-width: 768px) {
           .whatsapp-fab {
             bottom: 20px;
-            right: 20px;
+            left: 20px;
             width: 48px;
             height: 48px;
           }
           .whatsapp-fab-tooltip {
             display: none;
+          }
+          .scroll-top-btn {
+            bottom: 20px;
+            right: 20px;
+            width: 48px;
+            height: 48px;
           }
         }
       `}</style>
