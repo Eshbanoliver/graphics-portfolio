@@ -1,7 +1,12 @@
 import React from 'react';
+import { Palette, Users, Megaphone, Video } from 'lucide-react';
 import { 
-  PenTool, Film, Palette, Layers, Users, Sparkles, Megaphone, Video
-} from 'lucide-react';
+  AdobePremiere, 
+  AdobeIllustrator, 
+  AdobePhotoshop, 
+  AdobeAfterEffects, 
+  Canva 
+} from '../components/SocialIcons';
 
 export const Skills: React.FC = () => {
   // Domain categories
@@ -57,7 +62,7 @@ export const Skills: React.FC = () => {
       name: 'Adobe Premiere Pro',
       category: 'Video Editing',
       level: 95,
-      icon: <Film size={20} />,
+      icon: <AdobePremiere size={20} />,
       desc: 'Advanced timeline editing, synchronization, color correction, and audio design.',
       glowColor: 'rgba(0, 240, 255, 0.15)'
     },
@@ -65,7 +70,7 @@ export const Skills: React.FC = () => {
       name: 'Adobe Illustrator',
       category: 'Vector Graphics',
       level: 92,
-      icon: <PenTool size={20} />,
+      icon: <AdobeIllustrator size={20} />,
       desc: 'Scalable vector branding, custom typefaces, print layouts, and digital banners.',
       glowColor: 'rgba(168, 85, 247, 0.15)'
     },
@@ -73,7 +78,7 @@ export const Skills: React.FC = () => {
       name: 'Adobe Photoshop',
       category: 'Raster Design',
       level: 90,
-      icon: <Layers size={20} />,
+      icon: <AdobePhotoshop size={20} />,
       desc: 'Creative compositing, photographic manipulations, visual cleanups, and social assets.',
       glowColor: 'rgba(0, 240, 255, 0.15)'
     },
@@ -81,7 +86,7 @@ export const Skills: React.FC = () => {
       name: 'Adobe After Effects',
       category: 'Motion Design',
       level: 88,
-      icon: <Sparkles size={20} />,
+      icon: <AdobeAfterEffects size={20} />,
       desc: 'Complex dynamic typography, custom transitions, text tracking, and overlays.',
       glowColor: 'rgba(168, 85, 247, 0.15)'
     },
@@ -89,7 +94,7 @@ export const Skills: React.FC = () => {
       name: 'Canva',
       category: 'Quick Assets',
       level: 85,
-      icon: <Palette size={20} />,
+      icon: <Canva size={20} />,
       desc: 'Rapid templates, team design sharing, and swift layouts for social channels.',
       glowColor: 'rgba(0, 240, 255, 0.15)'
     }
