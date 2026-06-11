@@ -25,7 +25,7 @@ export const Contact: React.FC = () => {
   const socialLinks = [
     { name: 'LinkedIn', icon: <Linkedin size={20} />, url: 'https://www.linkedin.com/in/sakshi-james-3ba6ba184?utm_source=share_via&utm_content=profile&utm_medium=member_android' },
     { name: 'Instagram', icon: <Instagram size={20} />, url: 'https://www.instagram.com/sakshijames484?igsh=MTRjYnkyaml2M2poaw==' },
-    { name: 'WhatsApp', icon: <Whatsapp size={20} />, url: 'https://wa.me/919999999999?text=Hi%20Sakshi,%20I%20saw%20your%20portfolio%20and%20would%20love%20to%20connect%20about%20a%20project!' },
+    { name: 'WhatsApp', icon: <Whatsapp size={20} />, url: 'https://wa.me/917728065750?text=Hi%20Sakshi,%20I%20saw%20your%20portfolio%20and%20would%20love%20to%20connect%20about%20a%20project!' },
     { name: 'YouTube', icon: <Youtube size={20} />, url: 'https://youtube.com' },
   ];
 

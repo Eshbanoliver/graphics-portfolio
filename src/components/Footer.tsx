@@ -177,7 +177,7 @@ export const Footer: React.FC<FooterProps> = ({ setActivePage }) => {
               <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="YouTube">
                 <Youtube size={18} />
               </a>
-              <a href="https://wa.me/919999999999?text=Hi%20Sakshi,%20I'm%20interested%20in%20hiring%20you%20for%20a%20project!" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="WhatsApp">
+              <a href="https://wa.me/917728065750?text=Hi%20Sakshi,%20I'm%20interested%20in%20hiring%20you%20for%20a%20project!" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="WhatsApp">
                 <Whatsapp size={18} />
               </a>
             </div>
