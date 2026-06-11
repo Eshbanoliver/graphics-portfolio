@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Copy, Check, Send } from 'lucide-react';
-import { Github, Instagram, Linkedin, Youtube } from '../components/SocialIcons';
+import { Whatsapp, Instagram, Linkedin, Youtube } from '../components/SocialIcons';
 
 export const Contact: React.FC = () => {
   const [copied, setCopied] = useState(false);
@@ -8,7 +8,7 @@ export const Contact: React.FC = () => {
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
 
   const copyEmail = () => {
-    navigator.clipboard.writeText('contact@sakshijames.com');
+    navigator.clipboard.writeText('sakshijamesofficial@gmail.com');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -23,10 +23,10 @@ export const Contact: React.FC = () => {
   };
 
   const socialLinks = [
-    { name: 'LinkedIn', icon: <Linkedin size={20} />, url: 'https://linkedin.com' },
-    { name: 'Instagram', icon: <Instagram size={20} />, url: 'https://instagram.com' },
+    { name: 'LinkedIn', icon: <Linkedin size={20} />, url: 'https://www.linkedin.com/in/sakshi-james-3ba6ba184?utm_source=share_via&utm_content=profile&utm_medium=member_android' },
+    { name: 'Instagram', icon: <Instagram size={20} />, url: 'https://www.instagram.com/sakshijames484?igsh=MTRjYnkyaml2M2poaw==' },
+    { name: 'WhatsApp', icon: <Whatsapp size={20} />, url: 'https://wa.me/919999999999?text=Hi%20Sakshi,%20I%20saw%20your%20portfolio%20and%20would%20love%20to%20connect%20about%20a%20project!' },
     { name: 'YouTube', icon: <Youtube size={20} />, url: 'https://youtube.com' },
-    { name: 'GitHub', icon: <Github size={20} />, url: 'https://github.com' },
   ];
 
   return (
@@ -319,7 +319,7 @@ export const Contact: React.FC = () => {
                 </div>
                 <div className="email-text">
                   <span className="email-label">Direct Email</span>
-                  <span className="email-val">contact@sakshijames.com</span>
+                  <span className="email-val">sakshijamesofficial@gmail.com</span>
                 </div>
               </div>
               <button 

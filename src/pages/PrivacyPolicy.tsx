@@ -153,7 +153,7 @@ export const PrivacyPolicy: React.FC = () => {
               I do not run user registration, user accounts, or newsletters. The only direct way you share personal information is if you voluntarily choose to contact me via:
             </p>
             <ul>
-              <li>The direct-contact email address (<a href="mailto:contact@sakshijames.com" style={{ color: 'var(--accent-blue)', textDecoration: 'underline' }}>contact@sakshijames.com</a>).</li>
+              <li>The direct-contact email address (<a href="mailto:sakshijamesofficial@gmail.com" style={{ color: 'var(--accent-blue)', textDecoration: 'underline' }}>sakshijamesofficial@gmail.com</a>).</li>
               <li>The custom consultation form on the Contact page, where you supply your Name, Email Address, and Project Brief.</li>
             </ul>
           </div>
@@ -182,7 +182,7 @@ export const PrivacyPolicy: React.FC = () => {
           <div className="privacy-section">
             <h2>5. Contact Me</h2>
             <p>
-              If you have any questions or concerns about this policy or how I manage communications data, please reach out directly at: <a href="mailto:contact@sakshijames.com" style={{ color: 'var(--accent-blue)', textDecoration: 'underline' }}>contact@sakshijames.com</a>.
+              If you have any questions or concerns about this policy or how I manage communications data, please reach out directly at: <a href="mailto:sakshijamesofficial@gmail.com" style={{ color: 'var(--accent-blue)', textDecoration: 'underline' }}>sakshijamesofficial@gmail.com</a>.
             </p>
           </div>
         </div>

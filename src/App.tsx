@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import LoadingScreen from './components/LoadingScreen';
 import CustomCursor from './components/CustomCursor';
+import { Whatsapp } from './components/SocialIcons';
 
 // Pages
 import Home from './pages/Home';
@@ -109,6 +110,18 @@ function App() {
       {/* Dynamic responsive footer */}
       <Footer setActivePage={handlePageChange} />
 
+      {/* Floating WhatsApp FAB */}
+      <a
+        href="https://wa.me/919999999999?text=Hi%20Sakshi,%20I%20saw%20your%20portfolio%20and%20would%20love%20to%20connect%20about%20a%20project!"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="whatsapp-fab"
+        aria-label="Contact on WhatsApp"
+      >
+        <Whatsapp size={22} />
+        <span className="whatsapp-fab-tooltip">Chat with me</span>
+      </a>
+
       <style>{`
         .page-transition-enter {
           animation: page-fade-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -126,6 +139,79 @@ function App() {
             opacity: 1;
             transform: translateY(0);
             filter: blur(0);
+          }
+        }
+
+        /* WhatsApp Floating Action Button */
+        .whatsapp-fab {
+          position: fixed;
+          bottom: 30px;
+          right: 30px;
+          width: 56px;
+          height: 56px;
+          background-color: #25D366;
+          color: #ffffff;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+          z-index: 800;
+          cursor: none;
+          transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+          animation: whatsapp-pulse 2s infinite;
+        }
+
+        .whatsapp-fab:hover {
+          transform: scale(1.1);
+          box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+        }
+
+        .whatsapp-fab-tooltip {
+          position: absolute;
+          right: 70px;
+          background: rgba(8, 8, 10, 0.9);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          color: #ffffff;
+          padding: 8px 14px;
+          border-radius: 8px;
+          font-family: var(--font-interface);
+          font-size: 0.8rem;
+          font-weight: 600;
+          white-space: nowrap;
+          opacity: 0;
+          pointer-events: none;
+          transform: translateX(10px);
+          transition: opacity 0.3s ease, transform 0.3s ease;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .whatsapp-fab:hover .whatsapp-fab-tooltip {
+          opacity: 1;
+          transform: translateX(0);
+        }
+
+        @keyframes whatsapp-pulse {
+          0% {
+            box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+          }
+          70% {
+            box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+          }
+          100% {
+            box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+          }
+        }
+
+        @media (max-width: 768px) {
+          .whatsapp-fab {
+            bottom: 20px;
+            right: 20px;
+            width: 48px;
+            height: 48px;
+          }
+          .whatsapp-fab-tooltip {
+            display: none;
           }
         }
       `}</style>

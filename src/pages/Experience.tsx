@@ -1,7 +1,31 @@
 import React from 'react';
-import { Calendar, Briefcase, ChevronRight } from 'lucide-react';
+import { Calendar, Briefcase, ChevronRight, Award } from 'lucide-react';
 
 export const Experience: React.FC = () => {
+  const certifications = [
+    {
+      title: 'Adobe Certified Professional - Video Design',
+      issuer: 'Adobe Certified Program',
+      date: 'Earned 2024',
+      id: 'Premiere Pro & After Effects',
+      icon: <Award size={24} />
+    },
+    {
+      title: 'Adobe Certified Professional - Visual Design',
+      issuer: 'Adobe Certified Program',
+      date: 'Earned 2023',
+      id: 'Photoshop & Illustrator',
+      icon: <Award size={24} />
+    },
+    {
+      title: 'Canva Creative Certified',
+      issuer: 'Canva Creative Academy',
+      date: 'Earned 2023',
+      id: 'Visual Assets & Collaborations',
+      icon: <Award size={24} />
+    }
+  ];
+
   const experiences = [
     {
       role: 'Team Lead – Graphic Design',
@@ -255,6 +279,78 @@ export const Experience: React.FC = () => {
             font-size: 1.3rem;
           }
         }
+
+        /* Certifications Section */
+        .certifications-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 30px;
+          margin-top: 40px;
+        }
+
+        .cert-card {
+          padding: 30px;
+          border-radius: 20px;
+          background: linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+                      linear-gradient(135deg, rgba(168, 85, 247, 0.25) 0%, rgba(0, 240, 255, 0.25) 100%) border-box;
+          border: 1px solid transparent;
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          position: relative;
+          overflow: hidden;
+          transition: var(--transition-smooth);
+        }
+
+        .cert-card:hover {
+          background: linear-gradient(var(--bg-card-hover), var(--bg-card-hover)) padding-box,
+                      linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-blue) 100%) border-box;
+          transform: translateY(-5px);
+          box-shadow: 0 15px 30px rgba(168, 85, 247, 0.08),
+                      0 0 20px rgba(168, 85, 247, 0.15);
+        }
+
+        .cert-badge-icon {
+          width: 50px;
+          height: 50px;
+          border-radius: 12px;
+          background: rgba(0, 240, 255, 0.1);
+          color: var(--accent-blue);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .cert-card:hover .cert-badge-icon {
+          background: var(--gradient-accent);
+          color: var(--bg-dark);
+        }
+
+        .cert-title {
+          font-size: 1.25rem;
+          font-weight: 700;
+          color: #ffffff;
+        }
+
+        .cert-issuer {
+          font-family: var(--font-interface);
+          font-size: 0.9rem;
+          color: var(--accent-purple);
+          font-weight: 600;
+        }
+
+        .cert-meta {
+          font-size: 0.8rem;
+          color: var(--text-muted);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-top: 1px solid var(--border-color);
+          padding-top: 12px;
+          margin-top: auto;
+        }
       `}</style>
       <div className="exp-page-container">
         <div className="exp-header">
@@ -292,6 +388,28 @@ export const Experience: React.FC = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Certifications Section */}
+        <div style={{ marginTop: '120px' }}>
+          <div className="exp-header">
+            <div className="section-tag">Credentials & Verification</div>
+            <h2 className="exp-title" style={{ fontSize: '2.5rem' }}>Certifications & Honors</h2>
+          </div>
+          
+          <div className="certifications-grid">
+            {certifications.map((cert, idx) => (
+              <div key={idx} className="cert-card">
+                <div className="cert-badge-icon">{cert.icon}</div>
+                <h3 className="cert-title">{cert.title}</h3>
+                <div className="cert-issuer">{cert.issuer}</div>
+                <div className="cert-meta">
+                  <span>{cert.date}</span>
+                  <span>{cert.id}</span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>

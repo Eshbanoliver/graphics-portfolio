@@ -1,5 +1,5 @@
 import { ArrowUpRight } from 'lucide-react';
-import { Github, Linkedin, Instagram, Youtube } from './SocialIcons';
+import { Whatsapp, Linkedin, Instagram, Youtube } from './SocialIcons';
 
 interface FooterProps {
   setActivePage: (page: string) => void;
@@ -168,17 +168,17 @@ export const Footer: React.FC<FooterProps> = ({ setActivePage }) => {
               Visual director & graphic design team lead crafting scroll-stopping digital content, brand promotional creatives, and custom identity systems.
             </p>
             <div className="footer-socials">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/sakshi-james-3ba6ba184?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="LinkedIn">
                 <Linkedin size={18} />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="Instagram">
+              <a href="https://www.instagram.com/sakshijames484?igsh=MTRjYnkyaml2M2poaw==" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="Instagram">
                 <Instagram size={18} />
               </a>
               <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="YouTube">
                 <Youtube size={18} />
               </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="GitHub">
-                <Github size={18} />
+              <a href="https://wa.me/919999999999?text=Hi%20Sakshi,%20I'm%20interested%20in%20hiring%20you%20for%20a%20project!" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="WhatsApp">
+                <Whatsapp size={18} />
               </a>
             </div>
           </div>
@@ -198,8 +198,8 @@ export const Footer: React.FC<FooterProps> = ({ setActivePage }) => {
             <div className="footer-title">Contact</div>
             <ul className="footer-links">
               <li>
-                <a href="mailto:contact@sakshijames.com" className="footer-link">
-                  contact@sakshijames.com <ArrowUpRight size={14} />
+                <a href="mailto:sakshijamesofficial@gmail.com" className="footer-link">
+                  sakshijamesofficial@gmail.com <ArrowUpRight size={14} />
                 </a>
               </li>
               <li>
